@@ -1,0 +1,12 @@
+<h1>글 목록</h1>
+<a href="/home/new">글 작성</a>
+<br>
+<% @posts.each do |x| %>
+<%= x.id%>번 글: <br>
+제목:<a href="home/show/<%= x.id%>"><%=x.title%></a> <br>
+<%=x.updated_at%> <br>
+<a href="home/destroy/<%= x.id%>">삭제</a> <br>
+<a href="home/edit/<%= x.id%>">수정</a> <br>
+--------------------------<br>
+<%end%>
+<br>
